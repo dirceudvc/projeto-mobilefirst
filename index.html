@@ -8,12 +8,15 @@
     <title>Media Query</title>
     <!-- css que veio do google -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- estilos genéricos para funcionar no google first -->
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
-<body>
+<!-- rotina em JavaScript mudouTamanho, monitora o tamanho da tela para criar o menu -->
+<body onresise="mudouTamanho()">
     <header>
-        <h1>Meu Site</h1>
+        <h1>Meu Site.</h1>
         <!-- onclick="clickMenu()", é uma funcionalidade em JavaScript -->
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
 
@@ -51,6 +54,18 @@
         </article>
     </main>
     <script>
+
+        // se tela >= 768, mostra menu em uma linha um ao lado do outro
+        // senão, não mostra nada
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+
+        }
+
         // se clicar no menu, aparecem ou desaparecem as opções
         function clickMenu() {
             if (itens.style.display == 'block') {
