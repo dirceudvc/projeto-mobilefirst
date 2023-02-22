@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* reset, resetar as propriedades dos elementos */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    background-color: lightgrey;
+}
+
+header {
+    background-color: gray;
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+i#burguer {
+    background-color: rgb(41, 40, 40);
+    /* cor do menu */
+    color: white;
+    /* linha do menu na linha inteira */
+    display:block;
+    /* opções do menu no centro */
+    text-align: center;
+    /* aumenta espaço das opções dentro da barra */
+    padding: 10px;
+    /* cursor vira uma mãozinha */
+    cursor: pointer;
+}
+
+/* quando passar o mouse por cima */
+i#burguer:hover {
+    /* fundo branco */
+    background-color: white;
+    /* fonte preta */
+    color: black;
+}
+
+menu {
+    /* displa: block, aparece Opção 1 opção 2, opção 3, opção 4, opção 5; */
+    /* display: block; */
+    /* display: none, não aparecem essas opções; */
+    display: none;
+}
+
+/* tirar as bolinhas do menu */
+menu > ul {
+    list-style-type: none;
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    /* tirar o link */
+    text-decoration: none;
+    /* centralizar as opções do menu */
+    text-align: center;
+    background-color: rgb(88, 88, 88);
+    color: white;
+    /* linhas separando opções do menu */
+    border-top: 2px solid gray;
+}
+
+/* cria uma barra ao passar o mouse no menu */
+menu > ul > li > a:hover {
+    background-color: gray;
+}
+
+/* configurando o texto */
+main {
+    width: 90vw;
+    /* fundo do texto, branco */
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+article > h2 {
+    padding-bottom: 20px;
+}
+
+article > p {
+    /* justificar o texto */
+    text-align: justify;
+    /* margem de 10px no final do texto */
+    margin-bottom: 10px;
+    /* Identar cada começo de texto */
+    text-indent: 20px;
+}
